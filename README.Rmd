@@ -35,7 +35,7 @@ pak::pak("ganhualu/chrrdata")
 library(chrrdata)
 
 # list of county FIPS codes
-fips
+head(fips)
 ```
 
 
