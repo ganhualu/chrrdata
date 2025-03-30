@@ -8,3 +8,14 @@ fips <- chrr_2025 %>%
   select(1:5)
 
 usethis::use_data(fips, overwrite = TRUE)
+
+# 2025 measure data in long format
+chrr2025 <- chrr_2025 %>%
+  select(fipscode, year, starts_with("v")) %>%
+  pivot_longer(cols = starts_with("v"),
+               names_to = "variable",
+               values_to = "value") %>%
+  filter(!is.na(value)) %>%
+  mutate(measure_id = as.numeric(str_sub(variable, 2, 4)), .after = "year")
+
+usethis::use_data(chrr2025, overwrite = TRUE)
