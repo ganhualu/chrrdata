@@ -2,7 +2,7 @@ Package: chrrdata
 Title: Data for County Health Rankings and Roadmaps (CHRR)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person(given = "Ganhua", family = "Lu", email="ganhualu@gmail.com", role=c("aut", "cre"))
 Description: Provides a container for data from CHRR releases.
 License: MIT + file LICENSE
 Encoding: UTF-8

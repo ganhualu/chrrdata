@@ -6,17 +6,21 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of chrrdata is to provide a collection of datasets from CHRR
-releases.
+The goal of `chrrdata` package is to provide a collection of datasets
+from County Health Rankings and Roadmaps (CHRR) releases, offering
+researchers, analysts, and data enthusiasts with access to health and
+community data to support studies, projects, or explorations in areas
+like population health, public health, policy analysis, and social
+sciences.
 
 ## Installation
 
-You can install the development version of chrrdata from
+You can install the development version of `chrrdata` from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-pak::pak("ganhualu/chrrdata")
+# install.packages("devtools")
+devtools::install_github("ganhualu/chrrdata")
 ```
 
 ## Usage

@@ -7,7 +7,7 @@ chrr_2025 <- read_csv('https://www.countyhealthrankings.org/sites/default/files/
 fips <- chrr_2025 %>%
   select(1:5)
 
-usethis::use_data(fips, overwrite = TRUE)
+usethis::use_data(fips, overwrite = TRUE, compress = "bzip2")
 
 # 2025 measure data in long format
 chrr2025 <- chrr_2025 %>%
@@ -18,4 +18,4 @@ chrr2025 <- chrr_2025 %>%
   filter(!is.na(value)) %>%
   mutate(measure_id = as.numeric(str_sub(variable, 2, 4)), .after = "year")
 
-usethis::use_data(chrr2025, overwrite = TRUE)
+usethis::use_data(chrr2025, overwrite = TRUE, compress = "xz")
